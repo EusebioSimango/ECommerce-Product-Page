@@ -18,7 +18,9 @@ const Navbar: React.FC = () => {
       </nav>
     </div>
     <div className="right">
-      <div className="cart">Ca</div>
+      <div className="cart">
+        <img alt="Cart Icon" src="Challenge/images/icon-cart.svg"/>
+      </div>
       <div className="profile">A</div>
     </div>
   </header>
