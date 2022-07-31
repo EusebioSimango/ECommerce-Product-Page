@@ -1,12 +1,15 @@
 import React from 'react'
-
-// import { Container } from './styles';
+import Cart from "../assets/icon-cart.svg"
+import Avatar from "../assets/image-avatar.png"
+import Logo from "../assets/logo.svg"
 
 const Navbar: React.FC = () => {
   return (
   <header className='container'>
     <div className="left">
-      <a className='logo'>sneakers </a>
+      <a className='logo' href="./"> 
+        <img src={Logo}/>
+      </a>
       <nav>
         <ul>
           <li><a href="#">Collections</a></li>
@@ -19,9 +22,12 @@ const Navbar: React.FC = () => {
     </div>
     <div className="right">
       <div className="cart">
-        <img alt="Cart Icon" src="Challenge/images/icon-cart.svg"/>
+        <img alt="Cart Icon" src={Cart}/>
       </div>
-      <div className="profile">A</div>
+      <div className="profile">
+        <img alt="Avatar" src={Avatar}/>
+        
+      </div>
     </div>
   </header>
   )
