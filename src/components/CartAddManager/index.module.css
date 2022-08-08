@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.cartAddManager {
+	width: 100%;
+}
+
+.addToCart {
+	background-color: var(--orage);
+	color: var(--white);
+	width: 60%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	font-weight: 500;
+	border-radius: 10px;
+	border: none;
+}
+
+.addToCart:focus {
+	outline:  2px solid var(--orage);
+	outline-offset: 2px;
+}
+
+.addToCart img {
+	color: var(--white);
+}
