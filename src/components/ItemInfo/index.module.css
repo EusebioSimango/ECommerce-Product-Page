@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.itemInfo {
+	width: 37%;
+	overflow: hidden;
+}
+
+.itemInfo * {
+	padding: 10px 0;
+}
+
+.companyName {
+	color: var(--orage);
+}
+
+.itemName {
+	font-size: 35px;
+
+}
+
+.itemDescription {
+	color:  var(--dark-grayish-blue);
+}
+
+.itemPriceWithDiscount {
+	font-size: 20px;
+
+}
+
+.itemPriceWithDiscount::after {
+	content:  "50%";
+	position: relative;
+	font-size: 16px;
+	border-radius: 5px;
+	left: 20px;
+	color: var(--orage);
+	background-color: var(--pale-orage);
+	padding: 5px;
+}
+
+
+.itemRealPrice {
+	color:  var(--dark-grayish-blue);
+
+}
