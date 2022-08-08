@@ -7,9 +7,21 @@ const CartAddManager = () => {
 
 	const [itemQuantity, setItemQuantity] = useState<Number>(0)
 
+	const decrementQuantity = () => {
+		if (itemQuantity > 0) setItemQuantity(itemQuantity - 1)
+	}
+
 	return (
 		<div className={styles.cartAddManager}>
-			<div className={styles.controler}></div>
+			<div className={styles.controler}>
+				<span className={styles.minus}
+					onClick={decrementQuantity}
+				>-</span>
+				<span>{ itemQuantity }</span> 
+				<span className={styles.plus}
+					onClick={() => setItemQuantity(itemQuantity + 1)}
+				>+</span>
+			</div>
 			<button className={styles.addToCart}>
 				<img src={Cart} alt="Cart Icon"/>
 				Add to cart

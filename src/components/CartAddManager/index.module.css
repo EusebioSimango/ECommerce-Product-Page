@@ -6,6 +6,25 @@
 
 .cartAddManager {
 	width: 100%;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.controler {
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.minus, .plus {
+	font-weight: 500;
+	color: var(--orage);
+	font-size: 20px;
+	cursor: pointer;
+	user-select: none;
 }
 
 .addToCart {
