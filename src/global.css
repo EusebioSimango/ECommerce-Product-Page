@@ -41,7 +41,7 @@ header::after {
   display: block;
   width: inherit;
   height: 1px;
-  top: 70px;
+  top: 80px;
   opacity: .5;
   background-color: var(--dark-grayish-blue);
 }
@@ -69,7 +69,7 @@ nav ul li.active::after {
   display: block;
   width: 100%;
   height: 3px;
-  top: 25px;
+  top: 35px;
   background-color: var(--orage);
 }
 
@@ -79,7 +79,7 @@ nav ul li:hover::after {
   display: block;
   width: 100%;
   height: 3px;
-  top: 25px;
+  top: 35px;
   opacity: .2;
   background-color: var(--orage);
 }
