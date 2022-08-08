@@ -4,7 +4,12 @@ import styles from './index.module.css'
 const CartManager = () => {
 	return (
 		<div className={styles.cart}>
-			Cart with Everything done!
+			<div className={styles.cartHead}>
+			Cart
+			</div>
+			<div className={styles.cartBody}>
+			
+			</div>
 		</div>
 	)
 }
