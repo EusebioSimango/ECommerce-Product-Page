@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.css'
-import { cartItem } from '../CartAddManager'
+import { cartItem, cartItems } from '../CartAddManager'
 
 const CartManager = () => {
 	const [isEmpty, setIsEmpty] = useState<boolean>(true)
@@ -14,6 +14,7 @@ const CartManager = () => {
 			<div className={styles.cartHead}>
 			Cart
 			</div>
+			{console.log(cartItems)}
 			<div className={styles.cartBody}>
 			{ isEmpty && <p className={styles.cartEmpty}
 			>Your Cart is empty</p> }

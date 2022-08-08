@@ -3,13 +3,20 @@ import styles from './index.module.css'
 import Cart from '../../assets/icon-cart.svg'
 
 export var cartItem: number = 0
+export var cartItems = []
 
-const addToCart = (itemQuantity) => {
+const addToCart = (itemQuantity, itemInfo) => {
 	cartItem = cartItem + itemQuantity
-	console.log(cartItem)
+	const newItem = {
+		name: itemInfo.name,
+		price: itemInfo.price,
+		quantity: itemQuantity
+	}
+	cartItems = [...cartItems, newItem]
+	console.log(cartItem, cartItems)
 }
 
-const CartAddManager = () => {
+const CartAddManager = ({ itemInfo }) => {
 
 	const [itemQuantity, setItemQuantity] = useState<number>(0)
 
@@ -29,7 +36,9 @@ const CartAddManager = () => {
 				>+</span>
 			</div>
 			<button className={styles.addToCart}
-				onClick={() => addToCart(itemQuantity)}
+				onClick={() => {
+					return addToCart(itemQuantity, itemInfo)
+				}}
 			>
 				<img src={Cart} alt="Cart Icon"/>
 				Add to cart
