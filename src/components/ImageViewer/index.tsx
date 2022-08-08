@@ -32,10 +32,10 @@ const Prods = {
 const ImageViewer = () => {
   const [currentImage, setCurrentImage] = useState<string>(Prods.ProdOne.image)
 
-  const handleClick = (target) => {
+  const handleClick = (target: HTMLDivElement) => {
     const listNav = window.document.getElementsByClassName(target.className)
     const arrayListNav = [...listNav]
-    arrayListNav.map(thumb => {
+    arrayListNav.map((thumb: any) => {
       thumb.style.opacity = 'initial' 
       thumb.style.outline = 'none'
     })
