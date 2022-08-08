@@ -5,7 +5,7 @@ import Cart from '../../assets/icon-cart.svg'
 
 const CartAddManager = () => {
 
-	const [itemQuantity, setItemQuantity] = useState<Number>(0)
+	const [itemQuantity, setItemQuantity] = useState<number>(0)
 
 	const decrementQuantity = () => {
 		if (itemQuantity > 0) setItemQuantity(itemQuantity - 1)
