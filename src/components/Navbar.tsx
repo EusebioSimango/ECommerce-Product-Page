@@ -2,7 +2,8 @@ import React from 'react'
 import Logo from '../assets/logo.svg'
 import Cart from '../assets/icon-cart.svg'
 import Avatar from '../assets/image-avatar.png'
-
+import CartManager from './CartManager'
+import { Popover } from "@headlessui/react"
 
 // import { Container } from './styles';
 
@@ -23,14 +24,18 @@ const Navbar: React.FC = () => {
         </ul>
       </nav>
     </div>
-    <div className="right">
-      <div className="cart">
+    <Popover className="right">
+      <Popover.Panel>
+        <CartManager />
+      </Popover.Panel>
+      <Popover.Button className="cart">
         <img src={Cart} alt="Cart Icon" />
-      </div>
-      <div className="profile">
+      </Popover.Button>
+      <Popover.Button className="profile">
         <img src={Avatar} alt="User's Avatar"/>
-      </div>
-    </div>
+      </Popover.Button>
+      
+    </Popover>
   </header>
   )
 }

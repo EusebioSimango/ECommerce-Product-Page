@@ -96,7 +96,9 @@ nav ul {
 
 .cart {
   cursor: pointer;
-
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 
@@ -107,6 +109,7 @@ nav ul {
   overflow: hidden;
   border: 1px solid var(--orage);
   cursor: pointer;
+  outline: none;
 }
 
 .profile img {
