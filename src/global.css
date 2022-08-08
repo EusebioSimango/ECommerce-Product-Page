@@ -116,9 +116,7 @@ nav ul {
 
 .homeContainer {
   position: relative;
-  width: calc(100% - 100px)
-  left: 50px;
-  right: 50px;
+  width: calc(90vw - 200px);
   display: flex;
   justify-content: space-between;
 }
