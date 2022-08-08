@@ -38,16 +38,11 @@
 	overflow: hidden;
 	height: 80px;
 	width: 80px;
-}
-
-.imageThumbnail:has(img.active) {
-	outline: 2px solid var(--orage);
-	outline-offset: 2px;
-	margin: 50px;
+	transition: all .3;
 }
 
 .imageThumbnail:hover {
-	opacity: .7;
+	opacity: 0.7 !important;  /* to not stop after redifine with js*/
 }
 
 .imageThumbnail img {
