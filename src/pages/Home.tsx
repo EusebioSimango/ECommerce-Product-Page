@@ -3,7 +3,8 @@ import ItemInfo from '../components/ItemInfo'
 
 const Home = () => {
 	return (
-		<div>
+		<div className="homeContainer">
+			<div></div>
 			<ItemInfo />
 		</div>
 	)
