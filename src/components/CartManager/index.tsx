@@ -7,6 +7,7 @@ const CartManager = () => {
 
 	useEffect(() => {
 		if (cartItem > 0) setIsEmpty(false)
+		console.log('ran')
 	}, [cartItem])
 
 	return (
@@ -16,8 +17,12 @@ const CartManager = () => {
 			</div>
 			{console.log(cartItems)}
 			<div className={styles.cartBody}>
-			{ isEmpty && <p className={styles.cartEmpty}
-			>Your Cart is empty</p> }
+			{ isEmpty && (
+				<p className={styles.cartEmpty} >Your Cart is empty</p> 
+			)}
+				<div className={styles.item}>
+					<p>{cartItems[0]?.name}</p>
+				</div>
 			</div>
 		</div>
 	)

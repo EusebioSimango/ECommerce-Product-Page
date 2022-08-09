@@ -1,19 +1,39 @@
 import React, { useState } from 'react'
 import styles from './index.module.css'
 import Cart from '../../assets/icon-cart.svg'
+import CartManager from './../CartManager'
 
 export var cartItem: number = 0
 export var cartItems = []
 
 const addToCart = (itemQuantity, itemInfo) => {
 	cartItem = cartItem + itemQuantity
-	const newItem = {
-		name: itemInfo.name,
-		price: itemInfo.price,
-		quantity: itemQuantity
+	if (cartItems.length === 0 ) {
+		cartItems = [{...itemInfo, quantity: itemQuantity}]
 	}
-	cartItems = [...cartItems, newItem]
-	console.log(cartItem, cartItems)
+		
+
+	cartItems.map(item => {
+		if (itemInfo.name === item.name) {
+			const name = item.name
+			const newCartItems = cartItems.filter((i) => i.name !== name)	
+			console.log(newCartItems)
+			const newItem = {
+				name: itemInfo.name,
+				price: itemInfo.price,
+				quantity: item.quantity + itemQuantity
+			}
+
+			cartItems = [...newCartItems, newItem]	
+		} else {
+			const newItem = {
+				name: itemInfo.name,
+				price: itemInfo.price,
+				quantity: itemQuantity
+			}
+			cartItems = [...cartItems, newItem]
+		}
+	})
 }
 
 const CartAddManager = ({ itemInfo }) => {
