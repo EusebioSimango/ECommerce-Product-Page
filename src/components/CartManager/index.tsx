@@ -4,9 +4,12 @@ import { cartItem, cartItems } from '../CartAddManager'
 
 const CartManager = () => {
 	const [isEmpty, setIsEmpty] = useState<boolean>(true)
+	const [quantityOnCart, setQuantityOnCart] = useState<number|null>(null)
 
 	useEffect(() => {
 		if (cartItem > 0) setIsEmpty(false)
+
+		if (cartItem > 0) setQuantityOnCart(cartItem)
 		console.log('ran')
 	}, [cartItem])
 

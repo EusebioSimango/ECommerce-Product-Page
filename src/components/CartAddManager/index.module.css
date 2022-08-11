@@ -52,3 +52,15 @@
 .addToCart img {
 	color: var(--white);
 }
+
+.quantityOnCart {
+  bottom: 30px;
+  left: 10px;
+  font-size: 11px;
+  display: block;
+  width: 20px;
+  border-radius: 10px;
+  position: absolute;
+  color: var(--white);
+  background-color: var(--orage);
+}

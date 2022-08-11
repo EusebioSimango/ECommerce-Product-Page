@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Logo from '../assets/logo.svg'
 import Cart from '../assets/icon-cart.svg'
 import Avatar from '../assets/image-avatar.png'
 import CartManager from './CartManager'
+import {  cartItem } from './CartAddManager'
 import { Popover } from "@headlessui/react"
 
-// import { Container } from './styles';
+
 
 const Navbar: React.FC = () => {
+
   return (
   <header className='container'>
     <div className="left">

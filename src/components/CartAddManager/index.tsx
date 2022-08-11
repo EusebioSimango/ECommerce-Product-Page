@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './index.module.css'
 import Cart from '../../assets/icon-cart.svg'
 import CartManager from './../CartManager'
